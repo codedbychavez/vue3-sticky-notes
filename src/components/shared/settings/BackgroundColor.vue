@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     handleBackgroundColorChange(color) {
-      console.log('Handle background color change')
+      console.log('Handle background color change', color);
     }
   }
 }
@@ -37,11 +37,11 @@ export default {
 
 <template>
   <div>
-    <h3>Background Color</h3>
-    <div class="flex">
+    <h3 class="text-md font-semibold">Background color</h3>
+    <div class="mt-2">
       <div class="flex items-center">
         <div v-for="(backgroundColor, index) in backgroundColors" :key="index">
-          <Color :label="backgroundColor.name" :color="backgroundColor.value" />
+          <Color @colorChange="handleBackgroundColorChange" :label="backgroundColor.name" :color="backgroundColor.value" />
         </div>
       </div>
     </div>

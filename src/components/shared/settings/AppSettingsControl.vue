@@ -14,6 +14,6 @@ export default {
 <template>
   <div>
     <BackgroundColor />
-    <CardColor />
+    <CardColor class="mt-4" />
   </div>
 </template>
