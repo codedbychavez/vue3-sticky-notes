@@ -1,5 +1,5 @@
 <script>
-import AppSettingsControl from '../shared/AppSettingsControl.vue'
+import AppSettingsControl from '../shared/settings/AppSettingsControl.vue'
   export default {
     props: {
       show: Boolean,
