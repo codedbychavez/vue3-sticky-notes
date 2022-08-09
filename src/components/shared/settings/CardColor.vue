@@ -34,7 +34,7 @@ export default {
 
 <template>
   <div>
-    <h3 class="text-md font-semibold">Card color</h3>
+    <h3 class="text-md font-semibold">Card color <span class="text-gray-400">(Global)</span></h3>
     <div class="mt-2">
       <div class="flex items-center">
         <div v-for="(cardColor, index) in cardColors" :key="index">

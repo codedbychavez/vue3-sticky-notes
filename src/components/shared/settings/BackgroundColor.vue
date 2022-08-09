@@ -37,7 +37,7 @@ export default {
 
 <template>
   <div>
-    <h3 class="text-md font-semibold">Background color</h3>
+    <h3 class="text-md font-semibold">Background color <span class="text-gray-400">(Global)</span></h3>
     <div class="mt-2">
       <div class="flex items-center">
         <div v-for="(backgroundColor, index) in backgroundColors" :key="index">

@@ -17,7 +17,7 @@ import AppSettingsControl from '../shared/settings/AppSettingsControl.vue'
 
 <template>
   <!-- Main modal -->
-  <div id="defaultModal" tabindex="-1" aria-hidden="true" :class="{hidden: !show}" class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+  <div id="defaultModal" tabindex="-1" aria-hidden="true" :class="{hidden: !show}" class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-min md:inset-0 h-modal md:h-full">
     <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
           <!-- Modal content -->
           <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
