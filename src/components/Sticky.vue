@@ -9,7 +9,7 @@ export default {
     components: { TrashIcon },
     methods: {
       handleDeleteSticky() {
-        console.log('Handle delete sticky')
+        console.log('Handle delete sticky with id', this.id)
       }
     }
 }
@@ -17,7 +17,7 @@ export default {
 
 <template>
   
-<div class="block m-4 p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md">
+<div class="sticky block m-4 p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md">
   <div class="flex justify-end">
     <button @click="handleDeleteSticky" class="text-gray-400 hover:text-red-500"><TrashIcon /></button>
   </div>
@@ -28,6 +28,13 @@ export default {
 </template>
 
 <style scoped>
+  .sticky {
+    min-height: 25rem;
+    min-width: 25rem;
+  }
 
+  textarea {
+    min-height: 15rem;
+  }
 
 </style>

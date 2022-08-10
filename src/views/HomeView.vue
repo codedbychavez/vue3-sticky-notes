@@ -8,59 +8,53 @@ export default {
           stickies: [
             {
               id: 1,
-              title: 'My Title',
-              text: 'This is just some text',
+              title: 'Sticky 1',
+              text: 'This is just some text 1',
               color: 'bg-green-600'
             },
             {
               id: 2,
-              title: 'My Title',
-              text: 'This is just some text',
+              title: 'Sticky 2',
+              text: 'This is just some text 2',
               color: 'bg-green-600'
             },
             {
               id: 3,
-              title: 'My Title',
-              text: 'This is just some text',
+              title: 'Sticky 3',
+              text: 'This is just some text 3',
               color: 'bg-green-600'
             },
             {
               id: 4,
-              title: 'My Title',
-              text: 'This is just some text',
+              title: 'Sticky 4',
+              text: 'This is just some text 4',
               color: 'bg-green-600'
             },
             {
               id: 5,
-              title: 'My Title',
-              text: 'This is just some text',
+              title: 'Sticky 5',
+              text: 'This is just some text 5',
               color: 'bg-green-600'
             },
             {
               id: 6,
-              title: 'My Title',
-              text: 'This is just some text',
+              title: 'Sticky 6',
+              text: 'This is just some text 6',
               color: 'bg-green-600'
             },
           ]
         };
     },
     components: { Sticky, StickiesWrapper, NewStickyPlaceholder },
-    computed: {
-      last() {
-        return this.stickies.length - 1
-      }
-    }
-    
 }
 </script>
 
 <template>
   <div>
     <StickiesWrapper>
+      <NewStickyPlaceholder />
       <div v-for="(sticky, index) in stickies" :key="sticky.id">
-        <NewStickyPlaceholder v-if="index == 0" />
-        <Sticky :title="sticky.title" :text="sticky.text" />
+        <Sticky :id="sticky.id" :title="sticky.title" :text="sticky.text" />
       </div>
  
    
