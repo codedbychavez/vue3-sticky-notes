@@ -16,10 +16,22 @@ export default {
     text: String,
   },
   components: { TrashIcon },
+  data() {
+    return {
+      sticky: {
+        id: this.id,
+        title: this.title,
+        text: this.text,
+      }
+    }
+  },
   methods: {
     handleDeleteSticky() {
       this.stickiesStore.removeSticky(this.id);
     },
+    handleUpdateSticky() {
+      this.stickiesStore.updateSticky(this.sticky)
+    }
   },
 };
 </script>
@@ -58,7 +70,8 @@ export default {
         text-gray-900
       "
       type="text"
-      :value="title"
+      v-model="sticky.title"
+      @change="handleUpdateSticky"
     />
     <textarea
       class="w-full rounded-sm p-1 font-normal text-gray-700"
@@ -66,7 +79,8 @@ export default {
       id=""
       cols="30"
       rows="10"
-      v-model="text"
+      v-model="sticky.text"
+      @change="handleUpdateSticky"
     ></textarea>
   </div>
 </template>
