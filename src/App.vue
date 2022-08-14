@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-<Layout>
-  <router-view></router-view>
-</Layout>
+  <Layout>
+    <router-view></router-view>
+  </Layout>
 </template>

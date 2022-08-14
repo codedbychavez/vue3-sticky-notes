@@ -1,8 +1,8 @@
 <script>
 import { computed } from "@vue/reactivity";
-import Sticky from "../components/Sticky.vue";
-import StickiesWrapper from "../components/StickiesWrapper.vue";
-import NewStickyPlaceholder from "../components/NewStickyPlaceholder.vue";
+import Sticky from "../components/sticky/Sticky.vue";
+import StickiesWrapper from "../components/sticky/StickiesWrapper.vue";
+import NewStickyPlaceholder from "../components/sticky/NewStickyPlaceholder.vue";
 import { useStickiesStore } from "@/stores/stickies";
 
 export default {
@@ -22,7 +22,6 @@ export default {
   <div>
     <StickiesWrapper>
       <NewStickyPlaceholder />
-
       <div v-for="sticky in stickies" :key="sticky.id">
         <Sticky :id="sticky.id" :title="sticky.title" :text="sticky.text" />
       </div>

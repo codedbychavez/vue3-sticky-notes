@@ -1,6 +1,6 @@
 <script>
-import TrashIcon from "./icons/TrashIcon.vue";
-import { useStickiesStore } from "../stores/stickies";
+import TrashIcon from "../icons/TrashIcon.vue";
+import { useStickiesStore } from "../../stores/stickies";
 
 export default {
   setup() {
@@ -94,4 +94,10 @@ export default {
 textarea {
   min-height: 15rem;
 }
+
+/* Input focus */
+  input:focus, textarea:focus, select:focus{
+    outline: none;
+  }
+
 </style>

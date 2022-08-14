@@ -1,5 +1,5 @@
 <script>
-import TrashIcon from "./icons/TrashIcon.vue";
+import TrashIcon from "../icons/TrashIcon.vue";
 import { useStickiesStore } from "@/stores/stickies";
 
 export default {
